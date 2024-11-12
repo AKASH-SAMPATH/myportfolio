@@ -11,7 +11,7 @@ body {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
-     background-image: url('images/mypicture.jpg'); 
+     background-image: url('mypicture.jpg'); 
     background-size: cover; 
     background-position: center;
 }
