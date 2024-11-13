@@ -1,0 +1,120 @@
+/* Universal reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body style with black background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #f1f1f1; /* Light text for contrast */
+    padding: 20px;
+}
+
+/* Header style */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #f39c12; /* Neon yellow color for name */
+}
+
+header p {
+    font-size: 1.2em;
+    color: #b0b0b0; /* Lighter gray for the description */
+}
+
+.contact-info {
+    margin-top: 10px;
+}
+
+.contact-info a {
+    margin: 0 15px;
+    color: #1e90ff; /* Bright blue links */
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Menu style */
+#menu {
+    text-align: center;
+}
+
+#menu h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #f39c12; /* Neon yellow */
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12; /* Neon glow effect */
+}
+
+#menu ul {
+    list-style-type: none;
+}
+
+#menu li {
+    margin: 15px 0;
+}
+
+#menu a {
+    color: #1e90ff; /* Neon blue for links */
+    font-size: 1.5em;
+    text-decoration: none;
+    text-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff; /* Neon glow effect */
+}
+
+#menu a:hover {
+    text-decoration: underline;
+    color: #ff6347; /* Neon red on hover */
+    text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347; /* Hover glow effect */
+}
+
+/* Section style */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #1e1e1e; /* Slightly lighter black background */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+    font-size: 2em;
+    color: #f39c12; /* Neon yellow for section titles */
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 10px;
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12; /* Neon glow effect */
+}
+
+button {
+    background-color: #1e90ff;
+    color: white;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ff6347;
+    box-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347; /* Hover neon glow effect */
+}
+
+/* Footer style */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1em;
+    color: #b0b0b0;
+}
