@@ -8,7 +8,7 @@
 /* Body - Dark Theme with Background Image */
 body {
     font-family: Arial, sans-serif;
-    background: url('your-background-image.jpg') no-repeat center center fixed;
+    background: url('background.jpeg') no-repeat center center fixed;
     background-size: cover;
     color: #f1f1f1;
     padding: 20px;
@@ -19,7 +19,7 @@ body {
 header {
     text-align: center;
     margin-bottom: 30px;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better contrast */
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay to improve contrast */
     padding: 20px;
     border-radius: 10px;
 }
@@ -40,7 +40,7 @@ header h1:hover {
 /* Job Title */
 header p {
     font-size: 1.5em;
-    color: #ffffff;
+    color: #ffffff; /* Pure white for maximum visibility */
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
@@ -63,60 +63,27 @@ header p {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
     padding: 20px;
-    width: 100%;
 }
 
-/* Left and Right Image Adjustments */
-.left-image, .right-image {
-    width: 280px;  /* Ensures both images are the same size */
-    height: 380px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* Hover Effect for Images */
-.left-image:hover, .right-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-}
-
-/* Menu Box */
-.menu-box {
-    background: rgba(30, 30, 30, 0.9);
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    width: 50%;
-    min-width: 500px;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
-}
-
-/* Menu Heading */
-.menu-box h2 {
-    font-size: 2.5em;
-    color: #ffcc00;
-    text-shadow: 0 0 15px #ffcc00, 0 0 30px #ffcc00;
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Menu Links */
-.menu-box a {
+/* Profile Image - Rounded with Glow */
+.profile-pic {
     display: block;
-    color: #1e90ff;
-    font-size: 1.8em;
-    text-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff;
-    transition: all 0.3s ease-in-out;
+    margin: auto;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 5px solid #00abf0;
+    box-shadow: 0 0 25px rgba(0, 171, 240, 0.7);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
-/* Hover Effect for Menu Links */
-.menu-box a:hover {
-    color: #ff6347;
-    text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
-    transform: scale(1.1);
+/* Hover Effect for Profile Image */
+.profile-pic:hover {
+    transform: scale(1.1) translateY(-10px);
+    box-shadow: 0 0 35px rgba(0, 171, 240, 1);
 }
 
 /* Sections */
@@ -158,6 +125,41 @@ h2:hover, p:hover {
     color: #ff6347;
     text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
     transform: scale(1.05);
+}
+
+/* Menu */
+#menu {
+    text-align: center;
+    padding: 20px;
+    background: rgba(20, 20, 20, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Menu Headings */
+#menu h2 {
+    font-size: 2.5em;
+    color: #ffcc00;
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+}
+
+/* Menu Links */
+#menu ul {
+    list-style-type: none;
+}
+
+#menu a {
+    color: #1e90ff;
+    font-size: 1.8em;
+    text-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect for Menu Links */
+#menu a:hover {
+    color: #ff6347;
+    text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
+    transform: scale(1.1);
 }
 
 /* Buttons */
