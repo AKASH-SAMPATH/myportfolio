@@ -8,7 +8,7 @@
 /* Body - Dark Theme with Background Image */
 body {
     font-family: 'Arial', sans-serif;
-    background: url('your-background-image.jpg') no-repeat center center fixed; 
+    background: url('background.jpeg') no-repeat center center fixed; 
     background-size: cover;
     color: #e0e0e0;
     text-align: center;
