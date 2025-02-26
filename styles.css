@@ -1,6 +1,7 @@
-
+/* Importing Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -37,6 +38,8 @@ body {
   height: 45rem;
   padding: 2rem;
   perspective: 250rem;
+  max-width: 900px;
+  margin: auto;
 }
 
 .cover {
@@ -50,6 +53,7 @@ body {
   border-radius: 0.6rem;
   transform-origin: right;
   transition: transform 1s ease-in-out;
+  overflow: hidden;
 }
 
 .cover.turn {
@@ -68,6 +72,34 @@ body {
   background: var(--pages-color);
   box-shadow: var(--box-shadow);
   padding: 2rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.book-page.turn {
+  z-index: 5;
+}
+
+.profile-page {
+  text-align: center;
+  padding: 2rem;
+}
+
+.profile-page img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+
+h1, h3, p, ul {
+  text-align: center;
+}
+
+.skills-list li {
+  list-style: none;
+  font-size: 1.2rem;
 }
 
 .btn {
