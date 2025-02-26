@@ -8,7 +8,7 @@
 /* Body style with black background */
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212; /* Dark background */
+    background: linear-gradient(120deg, #0a0a0a, #121212); /* Subtle background gradient */
     color: #f1f1f1; /* Light text for contrast */
     padding: 20px;
 }
@@ -22,6 +22,7 @@ header {
 header h1 {
     font-size: 2.5em;
     color: #f39c12; /* Neon yellow color for name */
+    text-shadow: 0 0 15px #f39c12, 0 0 30px #f39c12; /* Neon glow */
 }
 
 header p {
@@ -38,22 +39,47 @@ header p {
     color: #1e90ff; /* Bright blue links */
     text-decoration: none;
     font-size: 1.1em;
+    transition: color 0.3s ease-in-out;
 }
 
 .contact-info a:hover {
     text-decoration: underline;
+    color: #ff6347; /* Neon red */
+    text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
+}
+
+/* Profile Image - Rounded with Glow */
+img {
+    display: block;
+    margin: auto;
+    border-radius: 50%; /* Circular image */
+    width: 200px; /* Adjust size */
+    height: 200px;
+    border: 5px solid #00abf0; /* Neon blue border */
+    box-shadow: 0 0 20px rgba(0, 171, 240, 0.6); /* Soft glow effect */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1) rotateY(15deg); /* 3D hover effect */
+    box-shadow: 0 0 30px rgba(0, 171, 240, 0.9);
 }
 
 /* Menu style */
 #menu {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 #menu h2 {
     font-size: 2.5em;
-    margin-bottom: 20px;
     color: #f39c12; /* Neon yellow */
-    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12; /* Neon glow effect */
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12;
+    transition: transform 0.3s ease-in-out;
+}
+
+#menu h2:hover {
+    transform: scale(1.1);
 }
 
 #menu ul {
@@ -68,47 +94,59 @@ header p {
     color: #1e90ff; /* Neon blue for links */
     font-size: 1.5em;
     text-decoration: none;
-    text-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff; /* Neon glow effect */
+    text-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff;
+    transition: all 0.3s ease-in-out;
 }
 
 #menu a:hover {
     text-decoration: underline;
-    color: #ff6347; /* Neon red on hover */
-    text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347; /* Hover glow effect */
+    color: #ff6347; /* Neon red */
+    text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
+    transform: scale(1.1);
 }
 
-/* Section style */
+/* Section style with 3D effect */
 section {
     margin-bottom: 30px;
     padding: 20px;
-    border-radius: 8px;
-    background-color: #1e1e1e; /* Slightly lighter black background */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    background: rgba(30, 30, 30, 0.9); /* Glassmorphism effect */
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.5s ease-in-out;
 }
 
+section:hover {
+    transform: perspective(1000px) rotateY(5deg); /* 3D effect */
+}
+
+/* Section Titles */
 h2 {
     font-size: 2em;
-    color: #f39c12; /* Neon yellow for section titles */
+    color: #f39c12;
     border-bottom: 2px solid #f39c12;
     padding-bottom: 10px;
-    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12; /* Neon glow effect */
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12;
 }
 
+/* Buttons with 3D Hover */
 button {
-    background-color: #1e90ff;
+    background: linear-gradient(135deg, #1e90ff, #00abf0);
     color: white;
     font-size: 1.1em;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-top: 15px;
+    box-shadow: 5px 5px 15px rgba(30, 144, 255, 0.3);
 }
 
 button:hover {
-    background-color: #ff6347;
-    box-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347; /* Hover neon glow effect */
+    background: linear-gradient(135deg, #ff6347, #ff4500);
+    box-shadow: 8px 8px 20px rgba(255, 99, 71, 0.5);
+    transform: translateY(-5px);
 }
 
 /* Footer style */
@@ -117,4 +155,24 @@ footer {
     margin-top: 30px;
     font-size: 1em;
     color: #b0b0b0;
+    opacity: 0.8;
+}
+
+/* Background Parallax Effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.1; /* Adds a subtle background */
+    z-index: -1;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
 }
