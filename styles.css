@@ -96,6 +96,7 @@ header h1:hover {
     transition: all 0.3s ease-in-out;
 }
 
+/* Hover Effect for Menu Links */
 #menu a:hover {
     color: #ff6347;
     text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
@@ -108,20 +109,25 @@ section {
     border-radius: 12px;
     background: rgba(30, 30, 30, 0.9);
     box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
-/* Hover Effect for Sections */
+/* Hover Effect for Sections - 3D Pop-Out */
 section:hover {
-    transform: perspective(1000px) rotateY(5deg);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    transform: perspective(1000px) rotateY(5deg) scale(1.03);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
 }
 
 /* Hover Effect for Text */
+h2, p {
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/* Text Hover Effect - Glow & Lift */
 h2:hover, p:hover {
     color: #ff6347;
     text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
-    transition: all 0.3s ease-in-out;
+    transform: scale(1.05);
 }
 
 /* Buttons */
@@ -131,14 +137,25 @@ button {
     font-size: 1.1em;
     padding: 12px 25px;
     border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* Hover Effect for Buttons */
 button:hover {
     background: linear-gradient(135deg, #ff6347, #ff4500);
     box-shadow: 8px 8px 20px rgba(255, 99, 71, 0.5);
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* Hover Effect for Images in Sections */
+section img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Images Lift & Glow */
+section img:hover {
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 /* Footer */
