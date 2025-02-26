@@ -69,38 +69,8 @@ header h1:hover {
 
 /* Hover Effect for Profile Image */
 .profile-pic:hover {
-    transform: scale(1.1) rotateY(10deg);
+    transform: scale(1.1) translateY(-10px);
     box-shadow: 0 0 30px rgba(0, 171, 240, 0.9);
-}
-
-/* Menu */
-#menu {
-    text-align: center;
-}
-
-#menu h2 {
-    font-size: 2.5em;
-    color: #f39c12;
-    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12;
-}
-
-/* Menu Links */
-#menu ul {
-    list-style-type: none;
-}
-
-#menu a {
-    color: #1e90ff;
-    font-size: 1.5em;
-    text-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Hover Effect for Menu Links */
-#menu a:hover {
-    color: #ff6347;
-    text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
-    transform: scale(1.1);
 }
 
 /* Sections */
@@ -112,9 +82,9 @@ section {
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
-/* Hover Effect for Sections - 3D Pop-Out */
+/* Hover Effect for Sections - Lift Effect */
 section:hover {
-    transform: perspective(1000px) rotateY(5deg) scale(1.03);
+    transform: translateY(-10px) scale(1.03);
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
 }
 
@@ -154,7 +124,7 @@ section img {
 
 /* Images Lift & Glow */
 section img:hover {
-    transform: scale(1.1) rotate(-2deg);
+    transform: scale(1.1) translateY(-10px);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
