@@ -1,216 +1,169 @@
-/* Universal reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Body - Dark Theme with Background Image */
-body {
-    font-family: Arial, sans-serif;
-    background: url('background.jpeg') no-repeat center center fixed;
-    background-size: cover;
-    color: #f1f1f1;
-    padding: 20px;
-    overflow: visible;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash Sampath - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Akash Sampath</h1>
+        <p>Artificial Intelligence Engineer | Robotics Enthusiast | Automation Expert</p>
+        <div class="contact-info">
+            <a href="mailto:Asampath@depaul.edu">Asampath@depaul.edu</a> |
+            <a href="tel:+13129824542">+1 (312) 982-4542</a> |
+            <a href="https://www.linkedin.com/in/akash-sampath" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/AKASH-SAMPATH" target="_blank">GitHub</a> |
+            <a href="AKASH SAMPATH RESUME.pdf" download>Download Resume</a>
+        </div>
+    </header>
+<div style="display: flex; align-items: center; justify-content: space-around; padding: 20px; background-color: #121212;">
+    <!-- Left Image -->
+    <img src="AKASHPIC.jpg" alt="Left Image" style="height: 500px; border-radius: 10px;">
 
-/* Header */
-header {
-    text-align: center;
-    margin-bottom: 30px;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay to improve contrast */
-    padding: 20px;
-    border-radius: 10px;
-}
+    <!-- Menu Section -->
+    <section id="menu" style="text-align: center; color: #FFA500; width: 70%;">
+        <h2 style="margin-bottom: 10px; font-family: Arial, sans-serif; color: #FFA500;">Menu</h2>
+        <ul style="list-style-type: none; padding: 0; margin: 0; font-family: Arial, sans-serif;">
+            <li style="margin: 10px;"><a href="#about" style="text-decoration: none; color: #00F;">Career Objective</a></li>
+            <li style="margin: 10px;"><a href="#education" style="text-decoration: none; color: #00F;">Education</a></li>
+            <li style="margin: 10px;"><a href="#experience" style="text-decoration: none; color: #00F;">Professional Experience</a></li>
+            <li style="margin: 10px;"><a href="#projects" style="text-decoration: none; color: #00F;">Academic Projects</a></li>
+            <li style="margin: 10px;"><a href="#skills" style="text-decoration: none; color: #00F;">Skills</a></li>
+            <li style="margin: 10px;"><a href="#certifications" style="text-decoration: none; color: #00F;">Certifications</a></li>
+        </ul>
+    </section>
 
-header h1 {
-    font-size: 3em;
-    color: #ffd700; /* Brighter gold for better visibility */
-    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 40px #ffcc00;
-    transition: transform 0.3s ease-in-out;
-}
+    <!-- Right Image -->
+    <img src="AI Image.png" alt="Right Image" style="height: 500px; border-radius: 10px;">
+</div>
 
-/* Hover Effect for Header */
-header h1:hover {
-    transform: scale(1.1);
-    text-shadow: 0 0 15px #ffcc00, 0 0 30px #ffcc00, 0 0 60px #ffcc00;
-}
 
-/* Job Title */
-header p {
-    font-size: 1.5em;
-    color: #ffffff; /* Pure white for maximum visibility */
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-}
 
-/* Contact Links */
-.contact-info a {
-    color: #00bfff; /* Bright neon blue */
-    font-size: 1.2em;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-}
+    <!-- Career Objective Section -->
+    <section id="about">
+        <h2>Career Objective</h2>
+        <p>As an AI and robotics engineer, I am driven by a passion for leveraging cutting-edge technologies in machine learning, automation, and advanced robotics to revolutionize complex systems. My goal is to harness the power of artificial intelligence to design innovative solutions that not only enhance operational efficiency but also address real-world challenges across industries. With a commitment to continuous learning and a results-oriented mindset, I seek opportunities where I can deliver measurable impact by driving automation, improving decision-making processes, and developing intelligent systems that redefine possibilities. Through collaboration, leadership, and technical expertise, I aim to contribute to groundbreaking advancements in AI-driven solutions, paving the way for smarter, more sustainable technologies. </p>
+        <button onclick="scrollToTop()">Back to Menu</button>
+    </section>
 
-.contact-info a:hover {
-    color: #ff4500; /* Orange-red glow */
-    text-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500;
-}
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>DePaul University, Chicago, IL</h3>
+            <p>Master of Science in Artificial Intelligence, <span class="date">Expected Graduation: 2025</span></p>
+            <p><strong>Relevant Coursework:</strong> Algorithms, Data Structures, Neural Networks, Robotics, Ethics in AI, Discrete Structures</p>
+        </div>
+        <div class="education-item">
+            <h3>Agni College of Technology, Chennai, India</h3>
+            <p>Bachelor of Engineering in Mechatronics, <span class="date">Graduated: 2022</span></p>
+        </div>
+        <button onclick="scrollToTop()">Back to Menu</button>
+    </section>
 
-/* Profile & Menu Container */
-.profile-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    padding: 20px;
-}
+    <!-- Professional Experience Section -->
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <div class="experience-item">
+            <h3>Associate Engineer, Urpan IT Private Limited</h3>
+            <p><span class="date">2023</span> | Hyderabad, India</p>
+            <ul>
+                <li>Automated industrial processes, reducing manual interventions by 40%.</li>
+               <li> Developed scalable PLC-based automation systems, improving operational efficiency by 30%.</li>
+                <li>Collaborated with cross-functional teams to integrate IoT technologies into legacy systems.</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <h3>Intern, Junior Project Engineer, Robonetics Automation Solution</h3>
+            <p><span class="date">2018</span> | Chennai, India</p>
+            <ul>
+                <li>Programmed and tested 6-axis industrial robots, optimizing gripper and tooling operations.</li>
+                <li>Contributed to process optimization, achieving a 15% reduction in cycle times..</li>
+            </ul>
+        </div>
+        <button onclick="scrollToTop()">Back to Menu</button>
+    </section>
 
-/* Profile Image - Rounded with Glow */
-.profile-pic {
-    display: block;
-    margin: auto;
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    border: 5px solid #00abf0;
-    box-shadow: 0 0 25px rgba(0, 171, 240, 0.7);
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-}
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Academic Projects</h2>
+        <div class="project-item">
+            <h3>Smart Teaching Assistant (TA) Management Suite</h3>
+            <p>TA Management Suite, a sophisticated platform tailored to enhance teaching 
+assistant (TA) management within educational settings. This system aims to 
+streamline TA applications, assignments, evaluations using advanced 
+algorithms like TF-IDF and BM25 also it features advanced search engine 
+through a unified, technology-driven approach. The suite will feature system 
+with Data Breach Avoidance using a honeypot strategy. The anticipated 
+benefits of this suite include significantly improved operational efficiency, an 
+enhanced user experience for TAs, instructors, and administrative personnel, 
+and a robust and secure data handling mechanism. This project addresses 
+crucial needs in educational administration by automating and optimizing the 
+management of TA resources, thus promising to markedly enhance both 
+administrative operations and educational outcomes.</p>
+             <img src="TA.png" alt="Deepfake Sample Images" style="width: 100%; max-width: 600px; margin-top: 10px;">
+        </div>
+        <div class="project-item">
+            <h3>Deepfake Detection System</h3>
+            <p>The proliferation of deepfake technology poses significant threats to the authenticity of vi
+sual media, making it increasingly challenging to distinguish manipulated images from genuine
+ content. This project, DeepfakeDetect, aims to develop a robust image classification system uti
+lizing Vision Transformers (ViT) to accurately differentiate between real and deepfake images.
+ By leveraging advanced techniques in deep learning and image processing, the system seeks
+ to enhance detection accuracy and generalization. The proposed solution involves training a
+ ViT model on a balanced dataset of real and fake images, incorporating data augmentation
+ and oversampling to address class imbalance. The model achieved an accuracy of 99.35%,
+ demonstrating the effectiveness of transformer-based architectures in identifying subtle incon
+sistencies characteristic of deepfakes. These findings contribute to enhancing digital media
+ authenticity and mitigating the risks associated with deepfake technology</p>
+             <img src="Deepfake image.png" alt="Deepfake Sample Images" style="width: 100%; max-width: 600px; margin-top: 10px;">
+        </div>
+        <div class="project-item">
+            <h3>Automated Pail Inspection System</h3>
+            <p>This project aims to automate the quality testing process for pails and lids, replacing manual operations with robotic automation to improve efficiency, accuracy, and data collection. The system integrates high-precision load cells, robot-mounted cameras, and pneumatic mechanisms for tasks such as weight measurement, dimensional inspection, water filling, lid positioning, handle testing, and drop testing. Critical data is logged into an HMI system for analysis. By streamlining these processes, the system reduces human involvement, enhances productivity, and ensures consistent quality in industrial manufacturing environments.</p>
+            <img src="PAIL INSPECTION SYSTEM.png" alt="Pail Inspection System Design" style="width: 100%; max-width: 600px; margin-top: 10px;">
+        </div>
+        </div>
+        <button onclick="scrollToTop()">Back to Menu</button>
+    </section>
 
-/* Hover Effect for Profile Image */
-.profile-pic:hover {
-    transform: scale(1.1) translateY(-10px);
-    box-shadow: 0 0 35px rgba(0, 171, 240, 1);
-}
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Programming Languages :</strong>  Python, C++, Java, SQL, ROS2, RobotC</li>
+            <li><strong>AI & Robotics Tools :</strong>  TensorFlow, PyTorch, Vision Transformers, OpenCV</li>
+            <li><strong>Software :</strong>  SolidWorks, AutoCAD, Catia, ANSYS</li>
+            <li><strong>Hardware & Systems :</strong>  PLC Programming, Sensors, Microcontrollers (8085, 8051)</li>
+        </ul>
+        <button onclick="scrollToTop()">Back to Menu</button>
+    </section>
 
-/* Sections */
-section {
-    text-align: center;
-    padding: 25px;
-    margin: 20px auto;
-    width: 80%;
-    border-radius: 12px;
-    background: rgba(30, 30, 30, 0.9);
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
-    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-}
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Drone Piloting, Garuda Aerospace Pvt Ltd</li>
+            <li>AWS Certified Machine Learning </li>
+            <li>ROS (Robot Operating System) Essentials</li>
+            <li>First Aid Certification – Awarded by the President of India</li>
+            <li>Rashtrapati Scout Award – Recognition for exceptional leadership and community service</li>
+        </ul>
+        <button onclick="scrollToTop()">Back to Menu</button>
+    </section>
 
-/* Hover Effect - Lift Effect */
-section:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
-}
+    <footer>
+        <p>&copy; 2024 Akash Sampath. All rights reserved.</p>
+    </footer>
 
-/* Section Headings */
-h2 {
-    font-size: 2.5em;
-    color: #ffcc00;
-    text-shadow: 0 0 15px #ffcc00, 0 0 30px #ffcc00;
-}
-
-/* Paragraphs */
-p {
-    font-size: 1.3em;
-    line-height: 1.6;
-    color: #f1f1f1;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-}
-
-/* Hover Effect for Text */
-h2:hover, p:hover {
-    color: #ff6347;
-    text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
-    transform: scale(1.05);
-}
-
-/* Menu */
-#menu {
-    text-align: center;
-    padding: 20px;
-    background: rgba(20, 20, 20, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-}
-
-/* Menu Headings */
-#menu h2 {
-    font-size: 2.5em;
-    color: #ffcc00;
-    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
-}
-
-/* Menu Links */
-#menu ul {
-    list-style-type: none;
-}
-
-#menu a {
-    color: #1e90ff;
-    font-size: 1.8em;
-    text-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Hover Effect for Menu Links */
-#menu a:hover {
-    color: #ff6347;
-    text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
-    transform: scale(1.1);
-}
-
-/* Buttons */
-button {
-    background: linear-gradient(135deg, #1e90ff, #00abf0);
-    color: white;
-    font-size: 1.2em;
-    padding: 12px 25px;
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* Hover Effect for Buttons */
-button:hover {
-    background: linear-gradient(135deg, #ff6347, #ff4500);
-    box-shadow: 8px 8px 20px rgba(255, 99, 71, 0.5);
-    transform: translateY(-5px) scale(1.1);
-}
-
-/* Hover Effect for Images in Sections */
-section img {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* Images Lift & Glow */
-section img:hover {
-    transform: scale(1.1) translateY(-10px);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 1.2em;
-    color: #b0b0b0;
-    opacity: 0.8;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-header, section, footer {
-    animation: fadeIn 1s ease-in-out;
-}
+    <script>
+        // Scroll to top function for Back to Menu button
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
