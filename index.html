@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
-    <header>
+    <header class="animated-header">
         <h1 class="hover-3d">Akash Sampath</h1>
         <p>Artificial Intelligence Engineer | Robotics Enthusiast | Automation Expert</p>
         <div class="contact-info">
@@ -20,41 +20,21 @@
         </div>
     </header>
     
-    <section id="menu">
-        <h2 class="hover-glow">Menu</h2>
+    <section id="about" class="floating-section">
+        <h2>About Me</h2>
+        <p>With extensive experience in AI and Robotics, I specialize in machine learning, automation, and cutting-edge AI solutions...</p>
+        <button class="glow-button">Contact Me</button>
+    </section>
+
+    <section id="menu" class="neon-menu">
+        <h2>Menu</h2>
         <ul>
-            <li><a href="#about" class="hover-scale">Career Objective</a></li>
             <li><a href="#education" class="hover-scale">Education</a></li>
             <li><a href="#experience" class="hover-scale">Professional Experience</a></li>
             <li><a href="#projects" class="hover-scale">Academic Projects</a></li>
             <li><a href="#skills" class="hover-scale">Skills</a></li>
             <li><a href="#certifications" class="hover-scale">Certifications</a></li>
         </ul>
-    </section>
-    
-    <section id="about">
-        <h2>Career Objective</h2>
-        <p>As an AI and robotics engineer, I am driven by a passion for leveraging cutting-edge technologies in machine learning, automation, and advanced robotics to revolutionize complex systems...</p>
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-        <div class="education-item">
-            <h3>DePaul University, Chicago, IL</h3>
-            <p>Master of Science in Artificial Intelligence, <span class="date">Expected Graduation: 2025</span></p>
-        </div>
-        <div class="education-item">
-            <h3>Agni College of Technology, Chennai, India</h3>
-            <p>Bachelor of Engineering in Mechatronics, <span class="date">Graduated: 2022</span></p>
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2>Professional Experience</h2>
-        <div class="experience-item">
-            <h3>Associate Engineer, Urpan IT Private Limited</h3>
-            <p><span class="date">2023</span> | Hyderabad, India</p>
-        </div>
     </section>
     
     <section id="projects" class="parallax">
@@ -67,18 +47,6 @@
             <h3>Deepfake Detection System</h3>
             <p>Developed a Vision Transformer model achieving 99.35% accuracy.</p>
         </div>
-        <div class="project-item hover-tilt">
-            <h3>Automated Pail Inspection System</h3>
-            <p>Automating quality testing for pails and lids using robotics.</p>
-        </div>
-    </section>
-    
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Programming Languages :</strong> Python, C++, Java, SQL, ROS2, RobotC</li>
-            <li><strong>AI & Robotics Tools :</strong> TensorFlow, PyTorch, Vision Transformers, OpenCV</li>
-        </ul>
     </section>
     
     <footer>
@@ -86,18 +54,9 @@
     </footer>
     
     <script>
-        document.querySelectorAll(".hover-3d").forEach(item => {
-            item.addEventListener("mousemove", (e) => {
-                const { offsetX, offsetY } = e;
-                const { offsetWidth, offsetHeight } = item;
-                const x = (offsetX / offsetWidth) * 20 - 10;
-                const y = (offsetY / offsetHeight) * 20 - 10;
-                gsap.to(item, { rotationX: y, rotationY: x, duration: 0.3 });
-            });
-            item.addEventListener("mouseleave", () => {
-                gsap.to(item, { rotationX: 0, rotationY: 0, duration: 0.3 });
-            });
-        });
+        gsap.from(".animated-header", { opacity: 0, y: -50, duration: 1 });
+        gsap.from(".floating-section", { opacity: 0, scale: 0.9, duration: 1, delay: 0.5 });
+        gsap.from(".neon-menu ul li", { opacity: 0, x: -50, stagger: 0.2, duration: 1, delay: 1 });
     </script>
 </body>
 </html>
