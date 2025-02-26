@@ -1,16 +1,17 @@
-// Page turn animation
+// Select all pages and buttons
 const pages = document.querySelectorAll(".book-page");
-const pageTurnBtn = document.querySelectorAll(".nextprev-btn");
+const pageTurnBtns = document.querySelectorAll(".nextprev-btn");
 
 // Ensure correct stacking order for pages
 pages.forEach((page, index) => {
   page.style.zIndex = 10 - index;
 });
 
-pageTurnBtn.forEach((btn) => {
+// Page turn animation
+pageTurnBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     const targetPage = document.getElementById(btn.getAttribute("data-page"));
-    
+
     if (targetPage) {
       if (targetPage.classList.contains("turn")) {
         targetPage.classList.remove("turn");
@@ -55,4 +56,4 @@ if (backProfileBtn) {
       }, (index + 1) * 200 + 100);
     });
   });
-}
+});
