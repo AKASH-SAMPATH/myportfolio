@@ -1,25 +1,31 @@
 // Page turn animation
+const pages = document.querySelectorAll(".book-page");
 const pageTurnBtn = document.querySelectorAll(".nextprev-btn");
-pageTurnBtn.forEach((el, index) => {
-  el.onclick = () => {
-    const pageTurnId = el.getAttribute("data-page");
-    const pageTurn = document.getElementById(pageTurnId);
-    if (pageTurn.classList.contains("turn")) {
-      pageTurn.classList.remove("turn");
+
+// Ensure correct stacking order for pages
+pages.forEach((page, index) => {
+  page.style.zIndex = 10 - index;
+});
+
+pageTurnBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const targetPage = document.getElementById(btn.getAttribute("data-page"));
+    
+    if (targetPage.classList.contains("turn")) {
+      targetPage.classList.remove("turn");
       setTimeout(() => {
-        pageTurn.style.zIndex = 10 - index;
+        targetPage.style.zIndex = 10 - Array.from(pages).indexOf(targetPage);
       }, 500);
     } else {
-      pageTurn.classList.add("turn");
+      targetPage.classList.add("turn");
       setTimeout(() => {
-        pageTurn.style.zIndex = 10 + index;
+        targetPage.style.zIndex = 10 + Array.from(pages).indexOf(targetPage);
       }, 500);
     }
-  };
+  });
 });
 
 // Contact Me button function
-const pages = document.querySelectorAll(".book-page.page-right");
 const contactMeBtn = document.querySelector(".btn.contact-me");
 contactMeBtn.onclick = () => {
   pages.forEach((page, index) => {
