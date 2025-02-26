@@ -13,14 +13,12 @@ body {
     padding: 20px;
     overflow: visible; /* Allows content to flow naturally */
     padding-bottom: 50px; /* Adds space below lifted content */
-    transition: all 0.5s ease-in-out;
 }
 
 /* Header */
 header {
     text-align: center;
     margin-bottom: 30px;
-    transition: all 0.4s ease-in-out;
 }
 
 header h1 {
@@ -57,7 +55,6 @@ header h1:hover {
     gap: 30px;
     flex-wrap: wrap;
     padding: 20px;
-    transition: all 0.5s ease-in-out;
 }
 
 /* Profile Image - Rounded with Glow */
@@ -78,6 +75,36 @@ header h1:hover {
     box-shadow: 0 0 30px rgba(0, 171, 240, 0.9);
 }
 
+/* Menu */
+#menu {
+    text-align: center;
+}
+
+#menu h2 {
+    font-size: 2.5em;
+    color: #f39c12;
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12;
+}
+
+/* Menu Links */
+#menu ul {
+    list-style-type: none;
+}
+
+#menu a {
+    color: #1e90ff;
+    font-size: 1.5em;
+    text-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect for Menu Links */
+#menu a:hover {
+    color: #ff6347;
+    text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
+    transform: scale(1.1);
+}
+
 /* Sections */
 section {
     padding: 20px;
@@ -87,6 +114,13 @@ section {
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
     position: relative; /* Keeps section in place */
     z-index: 2; /* Ensures it stays above other content */
+}
+
+/* Restoring the original title size */
+h2 {
+    font-size: 2em;
+    color: #f39c12;
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12;
 }
 
 /* Hover Effect - Lift with Extra Space */
@@ -101,12 +135,12 @@ section:hover {
 }
 
 /* Ensures smooth transition without hiding text */
-section p, section h2 {
-    font-size: 1.7em;
+section p {
+    font-size: 1.2em;
     transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
-h2:hover, p:hover {
+p:hover {
     color: #ff6347;
     text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
     transform: scale(1.05);
@@ -116,8 +150,8 @@ h2:hover, p:hover {
 button {
     background: linear-gradient(135deg, #1e90ff, #00abf0);
     color: white;
-    font-size: 1.3em;
-    padding: 14px 28px;
+    font-size: 1.2em;
+    padding: 12px 25px;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -131,7 +165,7 @@ button:hover {
 
 /* Hover Effect for Images in Sections */
 section img {
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* Images Lift & Glow */
@@ -144,8 +178,7 @@ section img:hover {
 footer {
     text-align: center;
     margin-top: 30px;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: #b0b0b0;
     opacity: 0.8;
-    transition: all 0.5s ease-in-out;
 }
