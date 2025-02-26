@@ -1,120 +1,91 @@
-/* Universal reset */
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Global Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Body style with black background */
+:root {
+  --bg-color: #081b29;
+  --main-color: #00abf0;
+  --text-color: #fff;
+  --cover-color: linear-gradient(45deg, #00abf0, #006e9a);
+  --pages-color: linear-gradient(90deg, #fff, #ddd);
+  --border: 0.125rem solid #00abf0;
+  --box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #121212; /* Dark background */
-    color: #f1f1f1; /* Light text for contrast */
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  overflow: hidden;
 }
 
-/* Header style */
-header {
-    text-align: center;
-    margin-bottom: 30px;
+.wrapper {
+  position: relative;
+  width: 66rem;
+  height: 45rem;
+  padding: 2rem;
+  perspective: 250rem;
 }
 
-header h1 {
-    font-size: 2.5em;
-    color: #f39c12; /* Neon yellow color for name */
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: var(--cover-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 0.6rem;
+  transform-origin: right;
+  transition: transform 1s ease-in-out;
 }
 
-header p {
-    font-size: 1.2em;
-    color: #b0b0b0; /* Lighter gray for the description */
+.cover.turn {
+  transform: rotateY(180deg);
 }
 
-.contact-info {
-    margin-top: 10px;
+.book {
+  display: flex;
+  perspective: 250rem;
 }
 
-.contact-info a {
-    margin: 0 15px;
-    color: #1e90ff; /* Bright blue links */
-    text-decoration: none;
-    font-size: 1.1em;
+.book-page {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: var(--pages-color);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
 }
 
-.contact-info a:hover {
-    text-decoration: underline;
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 9.5rem;
+  height: 3rem;
+  background: var(--main-color);
+  border: var(--border);
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: 0.5s;
 }
 
-/* Menu style */
-#menu {
-    text-align: center;
-}
-
-#menu h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #f39c12; /* Neon yellow */
-    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12; /* Neon glow effect */
-}
-
-#menu ul {
-    list-style-type: none;
-}
-
-#menu li {
-    margin: 15px 0;
-}
-
-#menu a {
-    color: #1e90ff; /* Neon blue for links */
-    font-size: 1.5em;
-    text-decoration: none;
-    text-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff; /* Neon glow effect */
-}
-
-#menu a:hover {
-    text-decoration: underline;
-    color: #ff6347; /* Neon red on hover */
-    text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347; /* Hover glow effect */
-}
-
-/* Section style */
-section {
-    margin-bottom: 30px;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #1e1e1e; /* Slightly lighter black background */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-h2 {
-    font-size: 2em;
-    color: #f39c12; /* Neon yellow for section titles */
-    border-bottom: 2px solid #f39c12;
-    padding-bottom: 10px;
-    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12; /* Neon glow effect */
-}
-
-button {
-    background-color: #1e90ff;
-    color: black;
-    font-size: 1.1em;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #ff6347;
-    box-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347; /* Hover neon glow effect */
-}
-
-/* Footer style */
-footer {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 1em;
-    color: #b0b0b0;
+.btn:hover {
+  background: transparent;
+  color: var(--main-color);
 }
