@@ -1,4 +1,4 @@
-
+// Page turn animation
 const pageTurnBtn = document.querySelectorAll(".nextprev-btn");
 pageTurnBtn.forEach((el, index) => {
   el.onclick = () => {
@@ -7,12 +7,12 @@ pageTurnBtn.forEach((el, index) => {
     if (pageTurn.classList.contains("turn")) {
       pageTurn.classList.remove("turn");
       setTimeout(() => {
-        pageTurn.style.zIndex = 20 - index;
+        pageTurn.style.zIndex = 10 - index;
       }, 500);
     } else {
       pageTurn.classList.add("turn");
       setTimeout(() => {
-        pageTurn.style.zIndex = 20 + index;
+        pageTurn.style.zIndex = 10 + index;
       }, 500);
     }
   };
