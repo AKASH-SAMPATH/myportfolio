@@ -5,15 +5,15 @@
     box-sizing: border-box;
 }
 
-/* Body style with black background */
+/* Body - Dark Theme */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(120deg, #0a0a0a, #121212); /* Subtle background gradient */
-    color: #f1f1f1; /* Light text for contrast */
+    background: linear-gradient(120deg, #0a0a0a, #121212);
+    color: #f1f1f1;
     padding: 20px;
 }
 
-/* Header style */
+/* Header */
 header {
     text-align: center;
     margin-bottom: 30px;
@@ -21,158 +21,131 @@ header {
 
 header h1 {
     font-size: 2.5em;
-    color: #f39c12; /* Neon yellow color for name */
-    text-shadow: 0 0 15px #f39c12, 0 0 30px #f39c12; /* Neon glow */
+    color: #f39c12;
+    text-shadow: 0 0 15px #f39c12, 0 0 30px #f39c12;
+    transition: transform 0.3s ease-in-out;
 }
 
-header p {
-    font-size: 1.2em;
-    color: #b0b0b0; /* Lighter gray for the description */
+/* Hover Effect for Header */
+header h1:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 25px #f39c12, 0 0 50px #f39c12;
 }
 
-.contact-info {
-    margin-top: 10px;
-}
-
+/* Contact Links */
 .contact-info a {
-    margin: 0 15px;
-    color: #1e90ff; /* Bright blue links */
-    text-decoration: none;
+    color: #1e90ff;
     font-size: 1.1em;
+    text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
 .contact-info a:hover {
-    text-decoration: underline;
-    color: #ff6347; /* Neon red */
+    color: #ff6347;
     text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
 }
 
+/* Profile & Menu Container */
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
 /* Profile Image - Rounded with Glow */
-img {
+.profile-pic {
     display: block;
     margin: auto;
-    border-radius: 50%; /* Circular image */
-    width: 200px; /* Adjust size */
+    width: 200px;
     height: 200px;
-    border: 5px solid #00abf0; /* Neon blue border */
-    box-shadow: 0 0 20px rgba(0, 171, 240, 0.6); /* Soft glow effect */
+    border-radius: 50%; /* Circular image */
+    border: 5px solid #00abf0;
+    box-shadow: 0 0 20px rgba(0, 171, 240, 0.6);
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
-img:hover {
-    transform: scale(1.1) rotateY(15deg); /* 3D hover effect */
+/* Hover Effect for Profile Image */
+.profile-pic:hover {
+    transform: scale(1.1) rotateY(10deg);
     box-shadow: 0 0 30px rgba(0, 171, 240, 0.9);
 }
 
-/* Menu style */
+/* Menu */
 #menu {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 #menu h2 {
     font-size: 2.5em;
-    color: #f39c12; /* Neon yellow */
+    color: #f39c12;
     text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12;
-    transition: transform 0.3s ease-in-out;
 }
 
-#menu h2:hover {
-    transform: scale(1.1);
-}
-
+/* Menu Links */
 #menu ul {
     list-style-type: none;
 }
 
-#menu li {
-    margin: 15px 0;
-}
-
 #menu a {
-    color: #1e90ff; /* Neon blue for links */
+    color: #1e90ff;
     font-size: 1.5em;
-    text-decoration: none;
     text-shadow: 0 0 10px #1e90ff, 0 0 20px #1e90ff;
     transition: all 0.3s ease-in-out;
 }
 
 #menu a:hover {
-    text-decoration: underline;
-    color: #ff6347; /* Neon red */
+    color: #ff6347;
     text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
     transform: scale(1.1);
 }
 
-/* Section style with 3D effect */
+/* Sections */
 section {
-    margin-bottom: 30px;
     padding: 20px;
     border-radius: 12px;
-    background: rgba(30, 30, 30, 0.9); /* Glassmorphism effect */
+    background: rgba(30, 30, 30, 0.9);
     box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
-    transform: perspective(1000px) rotateY(0deg);
     transition: transform 0.5s ease-in-out;
 }
 
+/* Hover Effect for Sections */
 section:hover {
-    transform: perspective(1000px) rotateY(5deg); /* 3D effect */
+    transform: perspective(1000px) rotateY(5deg);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
 }
 
-/* Section Titles */
-h2 {
-    font-size: 2em;
-    color: #f39c12;
-    border-bottom: 2px solid #f39c12;
-    padding-bottom: 10px;
-    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12;
+/* Hover Effect for Text */
+h2:hover, p:hover {
+    color: #ff6347;
+    text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Buttons with 3D Hover */
+/* Buttons */
 button {
     background: linear-gradient(135deg, #1e90ff, #00abf0);
     color: white;
     font-size: 1.1em;
     padding: 12px 25px;
-    border: none;
     border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    margin-top: 15px;
-    box-shadow: 5px 5px 15px rgba(30, 144, 255, 0.3);
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Hover Effect for Buttons */
 button:hover {
     background: linear-gradient(135deg, #ff6347, #ff4500);
     box-shadow: 8px 8px 20px rgba(255, 99, 71, 0.5);
     transform: translateY(-5px);
 }
 
-/* Footer style */
+/* Footer */
 footer {
     text-align: center;
     margin-top: 30px;
     font-size: 1em;
     color: #b0b0b0;
     opacity: 0.8;
-}
-
-/* Background Parallax Effect */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('background.jpeg') no-repeat center center fixed;
-    background-size: cover;
-    opacity: 0.1; /* Adds a subtle background */
-    z-index: -1;
-}
-
-/* Smooth Scroll */
-html {
-    scroll-behavior: smooth;
 }
