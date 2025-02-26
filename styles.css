@@ -5,32 +5,36 @@
     box-sizing: border-box;
 }
 
-/* Body - Professional Dark Theme */
+/* Body - Dark Theme with Background Image */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(120deg, #0f0f0f, #1c1c1c);
+    background: url('your-background-image.jpg') no-repeat center center fixed; 
+    background-size: cover;
     color: #e0e0e0;
     text-align: center;
     padding: 20px;
+    overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
 /* Header */
 header {
     text-align: center;
     margin-bottom: 40px;
+    animation: fadeIn 1.5s ease-in-out; /* Smooth Fade-in */
 }
 
 header h1 {
-    font-size: 2.8em;
-    color: #f5c518; /* Gold Accent */
+    font-size: 3em;
+    color: #f5c518;
     font-weight: 600;
-    text-shadow: 0 2px 8px rgba(245, 197, 24, 0.6);
+    text-shadow: 0 0 10px #f5c518, 0 0 20px #f5c518;
     transition: transform 0.3s ease-in-out;
 }
 
 /* Header Hover Effect */
 header h1:hover {
     transform: scale(1.05);
+    text-shadow: 0 0 15px #f5c518, 0 0 30px #f5c518;
 }
 
 /* Contact Links */
@@ -40,11 +44,12 @@ header h1:hover {
     text-decoration: none;
     margin: 0 12px;
     font-weight: 500;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 .contact-info a:hover {
     color: #f5c518;
+    text-shadow: 0 0 10px #f5c518, 0 0 20px #f5c518;
 }
 
 /* Profile Image - Professional Look */
@@ -54,6 +59,7 @@ header h1:hover {
     align-items: center;
     gap: 20px;
     padding: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .profile-pic {
@@ -61,13 +67,14 @@ header h1:hover {
     height: 180px;
     border-radius: 50%;
     border: 4px solid #007bff;
-    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
-    transition: transform 0.4s ease-in-out;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
+/* Hover Effect for Profile Image */
 .profile-pic:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 18px rgba(0, 123, 255, 0.6);
+    box-shadow: 0 0 30px rgba(0, 123, 255, 0.9);
 }
 
 /* Menu */
@@ -77,10 +84,10 @@ header h1:hover {
 }
 
 #menu h2 {
-    font-size: 2.2em;
+    font-size: 2.5em;
     color: #f5c518;
     font-weight: 600;
-    margin-bottom: 15px;
+    text-shadow: 0 0 15px #f5c518, 0 0 30px #f5c518;
 }
 
 /* Menu Links */
@@ -92,15 +99,17 @@ header h1:hover {
 #menu a {
     display: inline-block;
     color: #007bff;
-    font-size: 1.5em;
-    font-weight: 500;
+    font-size: 1.7em;
+    font-weight: 600;
     margin: 8px 0;
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
+/* Menu Hover */
 #menu a:hover {
     color: #f5c518;
+    text-shadow: 0 0 15px #f5c518, 0 0 30px #f5c518;
 }
 
 /* Sections */
@@ -109,28 +118,29 @@ section {
     margin: 25px auto;
     padding: 30px;
     border-radius: 10px;
-    background: #1e1e1e;
+    background: rgba(30, 30, 30, 0.9);
     box-shadow: 0 6px 12px rgba(255, 255, 255, 0.08);
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    animation: slideUp 1.5s ease-in-out;
 }
 
 /* Section Hover Effect */
 section:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15);
 }
 
 /* Headings */
 h2 {
-    font-size: 2em;
+    font-size: 2.2em;
     color: #f5c518;
     font-weight: 600;
-    margin-bottom: 12px;
+    text-shadow: 0 0 10px #f5c518, 0 0 20px #f5c518;
 }
 
 /* Paragraphs */
 p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     line-height: 1.6;
     color: #b0b0b0;
     transition: transform 0.3s ease-in-out;
@@ -138,7 +148,9 @@ p {
 
 /* Text Hover Effect */
 p:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
+    color: #ff6347;
+    text-shadow: 0 0 15px #ff6347, 0 0 30px #ff6347;
 }
 
 /* Buttons */
@@ -158,7 +170,7 @@ button {
 button:hover {
     background: linear-gradient(135deg, #f5c518, #d4a017);
     box-shadow: 0 6px 12px rgba(245, 197, 24, 0.3);
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }
 
 /* Images in Sections */
@@ -178,7 +190,30 @@ section img:hover {
 footer {
     text-align: center;
     margin-top: 40px;
-    font-size: 1em;
+    font-size: 1.1em;
     color: #b0b0b0;
     opacity: 0.85;
+}
+
+/* ✨ Keyframe Animations ✨ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
