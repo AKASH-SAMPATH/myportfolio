@@ -11,6 +11,8 @@ body {
     background: linear-gradient(120deg, #0a0a0a, #121212);
     color: #f1f1f1;
     padding: 20px;
+    overflow: visible; /* Allows content to flow naturally */
+    padding-bottom: 50px; /* Adds space below lifted content */
 }
 
 /* Header */
@@ -80,20 +82,26 @@ section {
     background: rgba(30, 30, 30, 0.9);
     box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    position: relative; /* Keeps section in place */
+    z-index: 2; /* Ensures it stays above other content */
 }
 
-/* Hover Effect for Sections - Lift Effect */
+/* Hover Effect - Lift with Extra Space */
 section:hover {
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
 }
 
-/* Hover Effect for Text */
-h2, p {
+/* Prevents content from being cut off */
+.content-wrapper {
+    overflow: visible;
+}
+
+/* Ensures smooth transition without hiding text */
+section p, section h2 {
     transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
-/* Text Hover Effect - Glow & Lift */
 h2:hover, p:hover {
     color: #ff6347;
     text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347;
