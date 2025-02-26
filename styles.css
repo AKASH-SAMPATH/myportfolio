@@ -62,6 +62,7 @@ body {
   overflow: hidden;
   transition: transform 0.8s ease-in-out;
   backface-visibility: hidden;
+  transform-origin: left;
 }
 
 .book-page.turn {
